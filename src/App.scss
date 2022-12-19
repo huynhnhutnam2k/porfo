@@ -1,0 +1,61 @@
+@use "./scss/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+.main {
+  background-color: #003566;
+  width: 100%;
+  min-height: 100vh;
+}
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: $white;
+}
+.center {
+  width: $width;
+  height: 400px;
+  @include flex(center, center);
+}
+.loading {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 100%;
+  border-top: transparent;
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: spin 1s linear infinite;
+  // w-10 h-10 border-4 border-blue-500 rounded-full animate-spin border-t-transparent
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

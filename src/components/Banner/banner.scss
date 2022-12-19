@@ -1,0 +1,34 @@
+@use "../../scss/" as *;
+
+.banner {
+  margin: 200px 0;
+  &-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    @include flex(center, center);
+    flex-direction: column;
+    h2,
+    h3 {
+      font-size: 40px;
+      text-align: center;
+      color: $white;
+    }
+    h3 {
+      font-size: 30px;
+    }
+  }
+  &-resume {
+    @include flex(center, center);
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+    max-width: 200px;
+    margin: 40px auto;
+    color: $white;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: $second-color;
+  }
+}

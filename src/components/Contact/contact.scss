@@ -1,0 +1,83 @@
+@use "../../scss/" as *;
+
+.contact {
+  &-container {
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 100px;
+    border-top: 1px solid black;
+  }
+  &-layout {
+    display: flex;
+    gap: 10px 20px;
+  }
+  &-nav {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    a {
+      color: $white;
+    }
+    &__item {
+      background: $second-color;
+      padding: 30px;
+      border-radius: 20px;
+      @include flex(center, center);
+      flex-direction: column;
+      color: $white;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    width: calc(100% - 30%);
+    input {
+      width: 100%;
+      padding: 10px;
+      font-weight: 500;
+      border: 0;
+      border-radius: 10px;
+      color: $white;
+      background-color: $second-color;
+      &::placeholder {
+        color: $white;
+        font-family: $font-family;
+      }
+    }
+    textarea {
+      color: $white;
+      outline: none;
+      padding: 10px;
+      resize: none;
+      font-family: $font-family;
+      border: 0;
+      border-radius: 10px;
+      background-color: $second-color;
+    }
+    button {
+      cursor: pointer;
+      background-color: $second-color;
+      color: $white;
+      padding: 15px;
+      @include flex(center, center);
+      border: 0;
+      font-weight: 500;
+      max-width: 200px;
+    }
+  }
+  &-response {
+    width: 100%;
+    padding: 15px;
+    color: $white;
+    margin-bottom: 20px;
+    &.success {
+      background-color: green;
+    }
+    &.error {
+      background-color: red;
+    }
+  }
+}
