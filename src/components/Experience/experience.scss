@@ -2,7 +2,8 @@
 
 .experience {
   &-container {
-    width: $width;
+    width: 100%;
+    max-width: $width;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 0;
@@ -31,6 +32,25 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px 50px;
+      padding: 30px;
+    }
+    &__item {
+      @include flex(center, center);
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .experience {
+    &-layout {
+      flex-direction: column;
+      padding: 20px;
+    }
+    &-skill {
+      width: 100%;
+      &__item {
+        @include flex(center, center);
+      }
     }
   }
 }

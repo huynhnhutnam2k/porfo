@@ -2,7 +2,8 @@
 
 .about {
   &-container {
-    width: $width;
+    max-width: $width;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 100px;
@@ -29,6 +30,19 @@
     span {
       margin: 20px 0;
       display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .about {
+    &-layout {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-content {
+      width: 100%;
     }
   }
 }

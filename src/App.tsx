@@ -34,11 +34,7 @@ function App() {
       return height;
     };
     const height = getHeight(element);
-    window.scrollTo({
-      top: height,
-      left: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: height, left: 0, behavior: "smooth" });
   }, [element]);
   return (
     <div className="main">
